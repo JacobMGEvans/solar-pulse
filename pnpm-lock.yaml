@@ -8,36 +8,141 @@ importers:
 
   .:
     dependencies:
+      '@ag-grid-community/client-side-row-model':
+        specifier: ^32.0.2
+        version: 32.0.2
+      '@ag-grid-community/core':
+        specifier: ^32.0.2
+        version: 32.0.2
+      '@ag-grid-community/styles':
+        specifier: ^32.0.2
+        version: 32.0.2
+      '@ag-grid-enterprise/advanced-filter':
+        specifier: ^32.0.2
+        version: 32.0.2
+      '@ag-grid-enterprise/charts-enterprise':
+        specifier: ^32.0.2
+        version: 32.0.2
+      '@ag-grid-enterprise/column-tool-panel':
+        specifier: ^32.0.2
+        version: 32.0.2
+      '@ag-grid-enterprise/excel-export':
+        specifier: ^32.0.2
+        version: 32.0.2
+      '@ag-grid-enterprise/filter-tool-panel':
+        specifier: ^32.0.2
+        version: 32.0.2
+      '@ag-grid-enterprise/menu':
+        specifier: ^32.0.2
+        version: 32.0.2
+      '@ag-grid-enterprise/range-selection':
+        specifier: ^32.0.2
+        version: 32.0.2
+      '@ag-grid-enterprise/rich-select':
+        specifier: ^32.0.2
+        version: 32.0.2
+      '@ag-grid-enterprise/row-grouping':
+        specifier: ^32.0.2
+        version: 32.0.2
+      '@ag-grid-enterprise/set-filter':
+        specifier: ^32.0.2
+        version: 32.0.2
+      '@ag-grid-enterprise/sparklines':
+        specifier: ^32.0.2
+        version: 32.0.2
+      '@ag-grid-enterprise/status-bar':
+        specifier: ^32.0.2
+        version: 32.0.2
+      ag-grid-react:
+        specifier: ^32.0.2
+        version: 32.0.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       next:
         specifier: 14.2.5
         version: 14.2.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react:
-        specifier: ^18
+        specifier: ^18.3.1
         version: 18.3.1
       react-dom:
-        specifier: ^18
+        specifier: ^18.3.1
         version: 18.3.1(react@18.3.1)
     devDependencies:
       '@types/node':
-        specifier: ^20
-        version: 20.14.14
+        specifier: ^22.1.0
+        version: 22.1.0
       '@types/react':
-        specifier: ^18
+        specifier: ^18.3.0
         version: 18.3.3
       '@types/react-dom':
-        specifier: ^18
+        specifier: ^18.3.0
         version: 18.3.0
       postcss:
-        specifier: ^8
+        specifier: ^8.4.40s
         version: 8.4.40
       tailwindcss:
-        specifier: ^3.4.1
+        specifier: ^3.4.7
         version: 3.4.7
       typescript:
-        specifier: ^5
+        specifier: ^5.5.4
         version: 5.5.4
 
 packages:
+
+  '@ag-grid-community/client-side-row-model@32.0.2':
+    resolution: {integrity: sha512-NuwnXsogowbtceLRF8YpAgqj/KU/nPb+FFgwajPwAoxAVzc0qQITMSV/PQN5T5YR9HSaaQQFyyjsHiPAcEoTlw==}
+
+  '@ag-grid-community/core@32.0.2':
+    resolution: {integrity: sha512-Pm4KpWuoHtn/eXgzunX0R10TZt6ze3KIz89Q/pzl2ZE+GdEjn6vPmgG+lMb/z90FgFwnMuIOQiz1qk0x5/xaHA==}
+
+  '@ag-grid-community/csv-export@32.0.2':
+    resolution: {integrity: sha512-OUvFiq6C/uwo2AQi+xisnECXDRnskmFPjp0BzK/3ybstAZuF3tpYcM57UEmnAR3u3Gnav+MOfKmZTCSL8c30fw==}
+
+  '@ag-grid-community/styles@32.0.2':
+    resolution: {integrity: sha512-AIbk1Oq1TOEfQopdretMs7Umv5Swm74JTTWH38sc1BX5NOFEC49m3wDi+5E/8xejtH0tmCAhKtpMsbMa16FGIQ==}
+
+  '@ag-grid-enterprise/advanced-filter@32.0.2':
+    resolution: {integrity: sha512-ZEhTVAcSORkX4N+VHw4n+gcNui4dTTf5Hxxi0ba+PmFw8qMwk71szERcBH7u0SY453dtPsUlrSolwtaq9Jb5uw==}
+
+  '@ag-grid-enterprise/charts-enterprise@32.0.2':
+    resolution: {integrity: sha512-abJ8zDyxUsYDbEqIKp5MGaDhACBsj2FLKvW6RB6o7xvx3wU6dfsdnb2BkR5MghvUa2TB5Y84NSRR4tp+w6F7aQ==}
+
+  '@ag-grid-enterprise/charts@32.0.2':
+    resolution: {integrity: sha512-gn4JJNCLX0X/AQ1qgAijw/NwDI/OwUa0m9jitdxW/5nFQklRqx7U3MyqsYmc3TDcBu2nQkO8GQ+GaKUh4KnItA==}
+
+  '@ag-grid-enterprise/column-tool-panel@32.0.2':
+    resolution: {integrity: sha512-d0s2T55ILUxDt7lw+aginaJhnAfo7RXyodzl/7dBhig2zqUHmQCctMhphrjj/c1QFni6beCVNhabshI57/R31A==}
+
+  '@ag-grid-enterprise/core@32.0.2':
+    resolution: {integrity: sha512-ksHpdHqgg7OR5XMQWZ51vvvN8APhYkbtwuHG7B6QNP6JmdVfa88kMCpvb08So/JR4lIlvhunKHhosI41EjSBkw==}
+
+  '@ag-grid-enterprise/excel-export@32.0.2':
+    resolution: {integrity: sha512-I3Gdfk3SSBZK2h32gr3p/FD5AICyRf3Gmu+sPjf3USlW2SwIl7h6j+/sgsEsm1XuLyrWjBFRJzpJjCiMGMvCPQ==}
+
+  '@ag-grid-enterprise/filter-tool-panel@32.0.2':
+    resolution: {integrity: sha512-n+EmloIUI6knEBoOdupVayUm9tYRJ1qZO7BOhQpeh63RPjfBkZqG+QVoH3As/7TwqKOfKIK19V2yQlToFxxbgg==}
+
+  '@ag-grid-enterprise/menu@32.0.2':
+    resolution: {integrity: sha512-uJKR3ZGjZbhENyUSAdt/2N4Ap/qnOGx7oddmZ9nJZUisjRBU6J2+qIEcEv5cl0OpQdD34sqeGUiDD9cOnJXtHg==}
+
+  '@ag-grid-enterprise/range-selection@32.0.2':
+    resolution: {integrity: sha512-S+Z1d0e9Z1SGB0M/sLgv9wiiXcw/yfTKbiLKP67638lZzgrQIQuPIgLBv+FVFNktAkCgI6XuBwFMHviIsEhhWA==}
+
+  '@ag-grid-enterprise/rich-select@32.0.2':
+    resolution: {integrity: sha512-kXLZ4oFTsAQRU1HMePJYVZQqx9abcZw57Ta5VJABpy5fOEtRbaSlCraXWdq6VZc1yexmLlUs1+jhVW3NwG6nMg==}
+
+  '@ag-grid-enterprise/row-grouping@32.0.2':
+    resolution: {integrity: sha512-JcWvSDDsFfgjiW7LEPDpUCiEIhRmKTWS529hHERE0TGPUrBNXtLBem+S8HAfqT2fMMYOC8EjL+x+x0oB9lhTuQ==}
+
+  '@ag-grid-enterprise/set-filter@32.0.2':
+    resolution: {integrity: sha512-U86PiVh9EwXG+mOlWral11/YupBHAPv+XbGvKZ0uzaNrp+seK1FWdefB8E6r/N6C/JWNjqvFGAEY4Qy3oFWQKQ==}
+
+  '@ag-grid-enterprise/side-bar@32.0.2':
+    resolution: {integrity: sha512-B8RBT7YAWLfw7Sa8XCadyz8KnrIlx52ncjzsUg1snwCKbFOTg5QJJtu/b0kNlPxLI0lFjFQziUntMhSScXUkjQ==}
+
+  '@ag-grid-enterprise/sparklines@32.0.2':
+    resolution: {integrity: sha512-JmcA/4gqdN45bN2fxSvAPFuBaFMersIyJVvSWWbvud+bigwF2hwQYuleUHrEL6w+Ep3pB8V6Cct4Bw07AVl0nw==}
+
+  '@ag-grid-enterprise/status-bar@32.0.2':
+    resolution: {integrity: sha512-IpEchzSiKfCl0kzgP9DvlJIDpGZlq+4MN6hUs8BEC1oHuBoNrnhEwQWcpV0Kd2k0URWT9jnSYBamChSNB0DKNQ==}
 
   '@alloc/quick-lru@5.2.0':
     resolution: {integrity: sha512-UrcABB+4bUrFABwbluTIBErXwvbsU/V7TZWfmbgJfbkwiBuziS9gxdODUyuiecfdGQ85jglMW6juS3+z5TsKLw==}
@@ -144,8 +249,8 @@ packages:
   '@swc/helpers@0.5.5':
     resolution: {integrity: sha512-KGYxvIOXcceOAbEk4bi/dVLEK9z8sZ0uBB3Il5b1rhfClSpcX0yfRO0KmTkqR2cnQDymwLB+25ZyMzICg/cm/A==}
 
-  '@types/node@20.14.14':
-    resolution: {integrity: sha512-d64f00982fS9YoOgJkAMolK7MN8Iq3TDdVjchbYHdEmjth/DHowx82GnoA+tVUAN+7vxfYUgAzi+JXbKNd2SDQ==}
+  '@types/node@22.1.0':
+    resolution: {integrity: sha512-AOmuRF0R2/5j1knA3c6G3HOk523Ga+l+ZXltX8SF1+5oqcXijjfTd8fY3XRZqSihEu9XhtQnKYLmkFaoxgsJHw==}
 
   '@types/prop-types@15.7.12':
     resolution: {integrity: sha512-5zvhXYtRNRluoE/jAp4GVsSduVUzNWKkOZrCDBWYtE7biZywwdC2AcEzg+cSMLFRfVgeAFqpfNabiPjxFddV1Q==}
@@ -155,6 +260,27 @@ packages:
 
   '@types/react@18.3.3':
     resolution: {integrity: sha512-hti/R0pS0q1/xx+TsI73XIqk26eBsISZ2R0wUijXIngRK9R/e7Xw/cXVxQK7R5JjW+SV4zGcn5hXjudkN/pLIw==}
+
+  ag-charts-community@10.0.2:
+    resolution: {integrity: sha512-OOlyH/YH6k6+uqAQZMwV4UCvI5Ue6K5KDmtTsGWKRNXi5iCBtJgudG0vKq/IP5c+nP8Ybk1Z9Z61m0E6yLIDHw==}
+
+  ag-charts-enterprise@10.0.2:
+    resolution: {integrity: sha512-QWW9Kby7Nuhn8u93kdbxy/nVkqS9b1KyFfsH1y+dvrwLg8F9jl/jyadsajf2OuzKN8LTIzbvEmJNRoHVraogFw==}
+
+  ag-charts-locale@10.0.2:
+    resolution: {integrity: sha512-QLsLLZA3R39+ppIpZzfplxuIFCYYC1YiZs6otmyItrxFsfWOriQmO1GFrVznEdKadp3dR4gnuQvMhRkccD9DUA==}
+
+  ag-charts-types@10.0.2:
+    resolution: {integrity: sha512-Nxo5slHOXlaeg0gRIsVnovAosQzzlYfWJtdDy0Aq/VvpJru/PJ+5i2c9aCyEhgRxhBjImsoegwkgRj7gNOWV6Q==}
+
+  ag-grid-community@32.0.2:
+    resolution: {integrity: sha512-vLJJUjnsG9hNK41GNuW2EHu1W264kxA/poOpcX4kmyrjU5Uzvelsbj3HdKAO9POV28iqyRdKGYfAWdn8QzA7KA==}
+
+  ag-grid-react@32.0.2:
+    resolution: {integrity: sha512-IWYsoyJ/Z763rWbE5/9SaT1n5xwIKrm/QzOG14l7i8z5J6JdJwfV0aQFATmEE8Xws2H48vlLcLdW1cv4hwV3eg==}
+    peerDependencies:
+      react: ^16.3.0 || ^17.0.0 || ^18.0.0
+      react-dom: ^16.3.0 || ^17.0.0 || ^18.0.0
 
   ansi-regex@5.0.1:
     resolution: {integrity: sha512-quJQXlTSUGL2LH9SUXo8VwsY4soanhgo6LNSm84E1LBcE8s3O0wpdiRzyR9z/ZZJMlMWv37qOOb9pdJlMUEKFQ==}
@@ -477,6 +603,9 @@ packages:
     resolution: {integrity: sha512-YF2kKIUzAofPMpfH6hOi2cGnv/HrUlfucspc7pDyvv7kGdqXrfj8SCl/t8owkEgKEuu8ZcRjSOxFxVLqwChZ2Q==}
     engines: {node: ^10 || ^12 || >=14}
 
+  prop-types@15.8.1:
+    resolution: {integrity: sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==}
+
   queue-microtask@1.2.3:
     resolution: {integrity: sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==}
 
@@ -484,6 +613,9 @@ packages:
     resolution: {integrity: sha512-5m4nQKp+rZRb09LNH59GM4BxTh9251/ylbKIbpe7TpGxfJ+9kv6BLkLBXIjjspbgbnIBNqlI23tRnTWT0snUIw==}
     peerDependencies:
       react: ^18.3.1
+
+  react-is@16.13.1:
+    resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
 
   react@18.3.1:
     resolution: {integrity: sha512-wS+hAgJShR0KhEvPJArfuPVN1+Hz1t0Y6n5jLrGQbkb4urgPE/0Rve+1kMB1v/oWgHgm4WIcV+i7F2pTVj+2iQ==}
@@ -595,8 +727,8 @@ packages:
     engines: {node: '>=14.17'}
     hasBin: true
 
-  undici-types@5.26.5:
-    resolution: {integrity: sha512-JlCMO+ehdEIKqlFxk6IfVoAUVmgz7cU7zD/h9XZ0qzeosSHmUJVOzSQvvYSYWXkFXC+IfLKSIffhv0sVZup6pA==}
+  undici-types@6.13.0:
+    resolution: {integrity: sha512-xtFJHudx8S2DSoujjMd1WeWvn7KKWFRESZTMeL1RptAYERu29D6jphMjjY+vn96jvN3kVPDNxU/E13VTaXj6jg==}
 
   util-deprecate@1.0.2:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}
@@ -620,6 +752,109 @@ packages:
     hasBin: true
 
 snapshots:
+
+  '@ag-grid-community/client-side-row-model@32.0.2':
+    dependencies:
+      '@ag-grid-community/core': 32.0.2
+      tslib: 2.6.3
+
+  '@ag-grid-community/core@32.0.2':
+    dependencies:
+      ag-charts-types: 10.0.2
+      tslib: 2.6.3
+
+  '@ag-grid-community/csv-export@32.0.2':
+    dependencies:
+      '@ag-grid-community/core': 32.0.2
+      tslib: 2.6.3
+
+  '@ag-grid-community/styles@32.0.2': {}
+
+  '@ag-grid-enterprise/advanced-filter@32.0.2':
+    dependencies:
+      '@ag-grid-community/core': 32.0.2
+      '@ag-grid-enterprise/core': 32.0.2
+
+  '@ag-grid-enterprise/charts-enterprise@32.0.2':
+    dependencies:
+      '@ag-grid-community/core': 32.0.2
+      '@ag-grid-enterprise/charts': 32.0.2
+      '@ag-grid-enterprise/core': 32.0.2
+      ag-charts-community: 10.0.2
+      ag-charts-enterprise: 10.0.2
+
+  '@ag-grid-enterprise/charts@32.0.2':
+    dependencies:
+      '@ag-grid-community/core': 32.0.2
+      '@ag-grid-enterprise/core': 32.0.2
+      '@ag-grid-enterprise/range-selection': 32.0.2
+      ag-charts-community: 10.0.2
+
+  '@ag-grid-enterprise/column-tool-panel@32.0.2':
+    dependencies:
+      '@ag-grid-community/core': 32.0.2
+      '@ag-grid-enterprise/core': 32.0.2
+      '@ag-grid-enterprise/row-grouping': 32.0.2
+      '@ag-grid-enterprise/side-bar': 32.0.2
+
+  '@ag-grid-enterprise/core@32.0.2':
+    dependencies:
+      '@ag-grid-community/core': 32.0.2
+
+  '@ag-grid-enterprise/excel-export@32.0.2':
+    dependencies:
+      '@ag-grid-community/core': 32.0.2
+      '@ag-grid-community/csv-export': 32.0.2
+      '@ag-grid-enterprise/core': 32.0.2
+
+  '@ag-grid-enterprise/filter-tool-panel@32.0.2':
+    dependencies:
+      '@ag-grid-community/core': 32.0.2
+      '@ag-grid-enterprise/core': 32.0.2
+      '@ag-grid-enterprise/side-bar': 32.0.2
+
+  '@ag-grid-enterprise/menu@32.0.2':
+    dependencies:
+      '@ag-grid-community/core': 32.0.2
+      '@ag-grid-enterprise/column-tool-panel': 32.0.2
+      '@ag-grid-enterprise/core': 32.0.2
+
+  '@ag-grid-enterprise/range-selection@32.0.2':
+    dependencies:
+      '@ag-grid-community/core': 32.0.2
+      '@ag-grid-enterprise/core': 32.0.2
+
+  '@ag-grid-enterprise/rich-select@32.0.2':
+    dependencies:
+      '@ag-grid-community/core': 32.0.2
+      '@ag-grid-enterprise/core': 32.0.2
+
+  '@ag-grid-enterprise/row-grouping@32.0.2':
+    dependencies:
+      '@ag-grid-community/core': 32.0.2
+      '@ag-grid-enterprise/core': 32.0.2
+
+  '@ag-grid-enterprise/set-filter@32.0.2':
+    dependencies:
+      '@ag-grid-community/core': 32.0.2
+      '@ag-grid-enterprise/core': 32.0.2
+
+  '@ag-grid-enterprise/side-bar@32.0.2':
+    dependencies:
+      '@ag-grid-community/core': 32.0.2
+      '@ag-grid-enterprise/core': 32.0.2
+
+  '@ag-grid-enterprise/sparklines@32.0.2':
+    dependencies:
+      '@ag-grid-community/core': 32.0.2
+      '@ag-grid-enterprise/core': 32.0.2
+      ag-charts-community: 10.0.2
+
+  '@ag-grid-enterprise/status-bar@32.0.2':
+    dependencies:
+      '@ag-grid-community/core': 32.0.2
+      '@ag-grid-enterprise/core': 32.0.2
+      tslib: 2.6.3
 
   '@alloc/quick-lru@5.2.0': {}
 
@@ -700,9 +935,9 @@ snapshots:
       '@swc/counter': 0.1.3
       tslib: 2.6.3
 
-  '@types/node@20.14.14':
+  '@types/node@22.1.0':
     dependencies:
-      undici-types: 5.26.5
+      undici-types: 6.13.0
 
   '@types/prop-types@15.7.12': {}
 
@@ -714,6 +949,30 @@ snapshots:
     dependencies:
       '@types/prop-types': 15.7.12
       csstype: 3.1.3
+
+  ag-charts-community@10.0.2:
+    dependencies:
+      ag-charts-locale: 10.0.2
+      ag-charts-types: 10.0.2
+
+  ag-charts-enterprise@10.0.2:
+    dependencies:
+      ag-charts-community: 10.0.2
+
+  ag-charts-locale@10.0.2: {}
+
+  ag-charts-types@10.0.2: {}
+
+  ag-grid-community@32.0.2:
+    dependencies:
+      ag-charts-types: 10.0.2
+
+  ag-grid-react@32.0.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
+    dependencies:
+      ag-grid-community: 32.0.2
+      prop-types: 15.8.1
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
 
   ansi-regex@5.0.1: {}
 
@@ -1001,6 +1260,12 @@ snapshots:
       picocolors: 1.0.1
       source-map-js: 1.2.0
 
+  prop-types@15.8.1:
+    dependencies:
+      loose-envify: 1.4.0
+      object-assign: 4.1.1
+      react-is: 16.13.1
+
   queue-microtask@1.2.3: {}
 
   react-dom@18.3.1(react@18.3.1):
@@ -1008,6 +1273,8 @@ snapshots:
       loose-envify: 1.4.0
       react: 18.3.1
       scheduler: 0.23.2
+
+  react-is@16.13.1: {}
 
   react@18.3.1:
     dependencies:
@@ -1131,7 +1398,7 @@ snapshots:
 
   typescript@5.5.4: {}
 
-  undici-types@5.26.5: {}
+  undici-types@6.13.0: {}
 
   util-deprecate@1.0.2: {}
 
