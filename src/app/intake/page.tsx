@@ -12,8 +12,9 @@ export default function Intake() {
 
   const form = useForm({
     ...formOpts,
-    transform: useTransform(({ value }) =>
-      mergeForm(initialFormState, { ...value })
+    transform: useTransform(
+      (baseForm) => mergeForm(baseForm, actionState!),
+      [actionState]
     ),
   });
 

@@ -16,7 +16,7 @@ const serverValidate = createServerValidate({
   },
 });
 
-export default async function formAction(prev: unknown, formData: FormData) {
+export default async function formAction(_prev: unknown, formData: FormData) {
   try {
     await serverValidate(formData);
   } catch (e) {
@@ -27,9 +27,13 @@ export default async function formAction(prev: unknown, formData: FormData) {
 
   const path = './src/app/intake/data.json';
   if (!fs.existsSync(path)) {
-    fs.writeFileSync(path, JSON.stringify(formData));
+    fs.writeFileSync(path, JSON.stringify(formData.values()), 'utf8');
   } else {
     const data = JSON.parse(fs.readFileSync(path, 'utf8'));
-    fs.writeFileSync(path, JSON.stringify({ ...data, ...formData }));
+    fs.writeFileSync(
+      path,
+      JSON.stringify({ ...data, ...formData.values() }),
+      'utf8'
+    );
   }
 }
