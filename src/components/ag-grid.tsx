@@ -52,10 +52,7 @@ const numberFormatter: ValueFormatterFunc = ({ value }) => {
   return value === null ? '' : formatter.format(value);
 };
 
-export default function FinanceExample({
-  gridTheme = 'ag-theme-quartz',
-  isDarkMode = false,
-}) {
+export default function FinanceExample({ gridTheme = 'ag-theme-quartz' }) {
   const [rowData, setRowData] = useState(getData());
   const gridRef = useRef<AgGridReact>(null);
 
@@ -158,7 +155,7 @@ export default function FinanceExample({
   );
 
   return (
-    <>
+    <div className={gridTheme} style={{ height: '100vh', width: '100vw' }}>
       <AgGridReact
         ref={gridRef}
         getRowId={(row) => getRowId(row as any)}
@@ -173,6 +170,6 @@ export default function FinanceExample({
         groupDefaultExpanded={-1}
         statusBar={statusBar}
       />
-    </>
+    </div>
   );
 }
