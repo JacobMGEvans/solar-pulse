@@ -9,53 +9,53 @@ importers:
   .:
     dependencies:
       '@ag-grid-community/client-side-row-model':
-        specifier: ^32.0.2
+        specifier: latest
         version: 32.0.2
       '@ag-grid-community/core':
-        specifier: ^32.0.2
+        specifier: latest
         version: 32.0.2
+      '@ag-grid-community/react':
+        specifier: latest
+        version: 32.0.2(@ag-grid-community/core@32.0.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@ag-grid-community/styles':
-        specifier: ^32.0.2
+        specifier: latest
         version: 32.0.2
       '@ag-grid-enterprise/advanced-filter':
-        specifier: ^32.0.2
+        specifier: latest
         version: 32.0.2
       '@ag-grid-enterprise/charts-enterprise':
-        specifier: ^32.0.2
+        specifier: latest
         version: 32.0.2
       '@ag-grid-enterprise/column-tool-panel':
-        specifier: ^32.0.2
+        specifier: latest
         version: 32.0.2
       '@ag-grid-enterprise/excel-export':
-        specifier: ^32.0.2
+        specifier: latest
         version: 32.0.2
       '@ag-grid-enterprise/filter-tool-panel':
-        specifier: ^32.0.2
+        specifier: latest
         version: 32.0.2
       '@ag-grid-enterprise/menu':
-        specifier: ^32.0.2
+        specifier: latest
         version: 32.0.2
       '@ag-grid-enterprise/range-selection':
-        specifier: ^32.0.2
+        specifier: latest
         version: 32.0.2
       '@ag-grid-enterprise/rich-select':
-        specifier: ^32.0.2
+        specifier: latest
         version: 32.0.2
       '@ag-grid-enterprise/row-grouping':
-        specifier: ^32.0.2
+        specifier: latest
         version: 32.0.2
       '@ag-grid-enterprise/set-filter':
-        specifier: ^32.0.2
+        specifier: latest
         version: 32.0.2
       '@ag-grid-enterprise/sparklines':
-        specifier: ^32.0.2
+        specifier: latest
         version: 32.0.2
       '@ag-grid-enterprise/status-bar':
-        specifier: ^32.0.2
+        specifier: latest
         version: 32.0.2
-      ag-grid-react:
-        specifier: ^32.0.2
-        version: 32.0.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       next:
         specifier: 14.2.5
         version: 14.2.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -95,6 +95,13 @@ packages:
 
   '@ag-grid-community/csv-export@32.0.2':
     resolution: {integrity: sha512-OUvFiq6C/uwo2AQi+xisnECXDRnskmFPjp0BzK/3ybstAZuF3tpYcM57UEmnAR3u3Gnav+MOfKmZTCSL8c30fw==}
+
+  '@ag-grid-community/react@32.0.2':
+    resolution: {integrity: sha512-flvY58sLaOKFR+nOeqqtZrRHyp0p7a5fGdPUSJPdQnF0iK9VhXvGtKQHCkZ/px6qZ8W//OrGeo3bgiHRxa1Rcg==}
+    peerDependencies:
+      '@ag-grid-community/core': 32.0.2
+      react: ^16.3.0 || ^17.0.0 || ^18.0.0
+      react-dom: ^16.3.0 || ^17.0.0 || ^18.0.0
 
   '@ag-grid-community/styles@32.0.2':
     resolution: {integrity: sha512-AIbk1Oq1TOEfQopdretMs7Umv5Swm74JTTWH38sc1BX5NOFEC49m3wDi+5E/8xejtH0tmCAhKtpMsbMa16FGIQ==}
@@ -272,15 +279,6 @@ packages:
 
   ag-charts-types@10.0.2:
     resolution: {integrity: sha512-Nxo5slHOXlaeg0gRIsVnovAosQzzlYfWJtdDy0Aq/VvpJru/PJ+5i2c9aCyEhgRxhBjImsoegwkgRj7gNOWV6Q==}
-
-  ag-grid-community@32.0.2:
-    resolution: {integrity: sha512-vLJJUjnsG9hNK41GNuW2EHu1W264kxA/poOpcX4kmyrjU5Uzvelsbj3HdKAO9POV28iqyRdKGYfAWdn8QzA7KA==}
-
-  ag-grid-react@32.0.2:
-    resolution: {integrity: sha512-IWYsoyJ/Z763rWbE5/9SaT1n5xwIKrm/QzOG14l7i8z5J6JdJwfV0aQFATmEE8Xws2H48vlLcLdW1cv4hwV3eg==}
-    peerDependencies:
-      react: ^16.3.0 || ^17.0.0 || ^18.0.0
-      react-dom: ^16.3.0 || ^17.0.0 || ^18.0.0
 
   ansi-regex@5.0.1:
     resolution: {integrity: sha512-quJQXlTSUGL2LH9SUXo8VwsY4soanhgo6LNSm84E1LBcE8s3O0wpdiRzyR9z/ZZJMlMWv37qOOb9pdJlMUEKFQ==}
@@ -768,6 +766,13 @@ snapshots:
       '@ag-grid-community/core': 32.0.2
       tslib: 2.6.3
 
+  '@ag-grid-community/react@32.0.2(@ag-grid-community/core@32.0.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+    dependencies:
+      '@ag-grid-community/core': 32.0.2
+      prop-types: 15.8.1
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
+
   '@ag-grid-community/styles@32.0.2': {}
 
   '@ag-grid-enterprise/advanced-filter@32.0.2':
@@ -962,17 +967,6 @@ snapshots:
   ag-charts-locale@10.0.2: {}
 
   ag-charts-types@10.0.2: {}
-
-  ag-grid-community@32.0.2:
-    dependencies:
-      ag-charts-types: 10.0.2
-
-  ag-grid-react@32.0.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
-    dependencies:
-      ag-grid-community: 32.0.2
-      prop-types: 15.8.1
-      react: 18.3.1
-      react-dom: 18.3.1(react@18.3.1)
 
   ansi-regex@5.0.1: {}
 

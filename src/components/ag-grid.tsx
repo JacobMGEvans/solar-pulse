@@ -26,7 +26,7 @@ import { StatusBarModule } from '@ag-grid-enterprise/status-bar';
 import React, { useCallback, useMemo, useRef, useState } from 'react';
 
 import { getData } from './fake-data';
-import { AgGridReact } from 'ag-grid-react';
+import { AgGridReact } from '@ag-grid-community/react';
 
 ModuleRegistry.registerModules([
   ClientSideRowModelModule,
@@ -158,10 +158,10 @@ export default function FinanceExample({ gridTheme = 'ag-theme-quartz' }) {
     <div className={gridTheme} style={{ height: '100vh', width: '100vw' }}>
       <AgGridReact
         ref={gridRef}
-        getRowId={(row) => getRowId(row as any)}
+        getRowId={getRowId}
         rowData={rowData}
-        columnDefs={colDefs as any}
-        defaultColDef={defaultColDef as any}
+        columnDefs={colDefs}
+        defaultColDef={defaultColDef}
         enableRangeSelection
         enableCharts
         rowSelection={'multiple'}
