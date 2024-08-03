@@ -1,5 +1,6 @@
 'use server';
 
+import fs from 'fs';
 import {
   ServerValidateError,
   createServerValidate,
@@ -22,10 +23,14 @@ export default async function formAction(prev: unknown, formData: FormData) {
     if (e instanceof ServerValidateError) {
       return e.formState;
     }
-
-    // Some other error occurred while validating your form
     throw e;
   }
 
-  // Your form has successfully validated!
+  // check if data.json exists
+  if (!fs.existsSync('./data.json')) {
+    fs.writeFileSync('./data.json', JSON.stringify(formData));
+  } else {
+    const data = JSON.parse(fs.readFileSync('./data.json', 'utf8'));
+    fs.writeFileSync('./data.json', JSON.stringify({ ...data, ...formData }));
+  }
 }

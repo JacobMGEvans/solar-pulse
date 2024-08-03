@@ -26,9 +26,9 @@
     "@ag-grid-enterprise/sparklines": "latest",
     "@ag-grid-enterprise/status-bar": "latest",
     "@tanstack/react-form": "^0.26.4",
-    "next": "latest",
-    "react": "19.0.0-rc-8269d55d-20240802",
-    "react-dom": "19.0.0-rc-8269d55d-20240802",
+    "next": "canary",
+    "react": "canary",
+    "react-dom": "canary",
     "zod": "latest"
   },
   "devDependencies": {

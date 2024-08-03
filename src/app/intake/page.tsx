@@ -4,15 +4,18 @@ import { useActionState } from 'react';
 import { initialFormState } from '@tanstack/react-form/nextjs';
 import { mergeForm, useForm, useTransform } from '@tanstack/react-form';
 
-import formAction from './form-action';
-import { formOpts } from './form-options';
+import formAction from '@/app/intake/form-action';
+import { formOpts } from '@/app/intake/form-options';
 
 export default function Intake() {
-  const [state, action] = useActionState(formAction, initialFormState);
+  const [actionState, action] = useActionState(formAction, initialFormState);
 
   const form = useForm({
     ...formOpts,
-    transform: useTransform((baseForm) => mergeForm(baseForm, state!), [state]),
+    transform: useTransform(
+      (baseForm) => mergeForm(baseForm, actionState!),
+      [actionState]
+    ),
   });
 
   const formErrors = form.useStore((formState) => formState.errors);
