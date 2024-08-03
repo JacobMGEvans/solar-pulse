@@ -25,16 +25,18 @@
     "@ag-grid-enterprise/set-filter": "latest",
     "@ag-grid-enterprise/sparklines": "latest",
     "@ag-grid-enterprise/status-bar": "latest",
-    "next": "14.2.5",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "@tanstack/react-form": "^0.26.4",
+    "next": "latest",
+    "react": "19.0.0-rc-8269d55d-20240802",
+    "react-dom": "19.0.0-rc-8269d55d-20240802",
+    "zod": "latest"
   },
   "devDependencies": {
-    "@types/node": "^22.1.0",
-    "@types/react": "^18.3.0",
-    "@types/react-dom": "^18.3.0",
-    "postcss": "^8.4.40s",
-    "tailwindcss": "^3.4.7",
-    "typescript": "^5.5.4"
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "postcss": "^8.4.40",
+    "tailwindcss": "latest",
+    "typescript": "latest"
   }
 }

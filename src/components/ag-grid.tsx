@@ -25,7 +25,7 @@ import { SparklinesModule } from '@ag-grid-enterprise/sparklines';
 import { StatusBarModule } from '@ag-grid-enterprise/status-bar';
 import React, { useCallback, useMemo, useRef, useState } from 'react';
 
-import { getData } from './fake-data';
+import { getData } from '@/components/fake-data';
 import { AgGridReact } from '@ag-grid-community/react';
 
 ModuleRegistry.registerModules([
