@@ -10,7 +10,7 @@ import { formOpts } from '@/app/intake/form-options';
 const serverValidate = createServerValidate({
   ...formOpts,
   onServerValidate: ({ value }) => {
-    console.log(value);
+    console.log('On server validate');
 
     return '';
   },
@@ -21,16 +21,15 @@ export default async function formAction(prev: unknown, formData: FormData) {
     await serverValidate(formData);
   } catch (e) {
     if (e instanceof ServerValidateError) {
-      return e.formState;
+      throw e.formState;
     }
-    throw e;
   }
 
-  // check if data.json exists
-  if (!fs.existsSync('./data.json')) {
-    fs.writeFileSync('./data.json', JSON.stringify(formData));
+  const path = './src/app/intake/data.json';
+  if (!fs.existsSync(path)) {
+    fs.writeFileSync(path, JSON.stringify(formData));
   } else {
-    const data = JSON.parse(fs.readFileSync('./data.json', 'utf8'));
-    fs.writeFileSync('./data.json', JSON.stringify({ ...data, ...formData }));
+    const data = JSON.parse(fs.readFileSync(path, 'utf8'));
+    fs.writeFileSync(path, JSON.stringify({ ...data, ...formData }));
   }
 }
