@@ -1,116 +1,62 @@
 'use client';
+import React from 'react';
+import { FieldValues, SubmitHandler, useForm } from 'react-hook-form';
+import formAction from './form-action';
 
-import { useActionState } from 'react';
-import { initialFormState } from '@tanstack/react-form/nextjs';
-import { mergeForm, useForm, useTransform } from '@tanstack/react-form';
-
-import formAction from '@/app/intake/form-action';
-import { formOpts } from '@/app/intake/form-options';
-
-export default function Intake() {
-  const [actionState, action] = useActionState(formAction, initialFormState);
-
-  const form = useForm({
-    ...formOpts,
-    transform: useTransform(
-      (baseForm) => mergeForm(baseForm, actionState!),
-      [actionState]
-    ),
-  });
-
-  const formErrors = form.useStore((formState) => formState.errors);
+export default function App() {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+  const onSubmit: SubmitHandler<FieldValues> = async (data) => {
+    console.log('ON SUBMIT', typeof data);
+    console.log('ON SUBMIT', data);
+    await formAction(null, data);
+  };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-100">
-      <form
-        className="bg-white p-8 rounded shadow-md w-full max-w-md"
-        action={action}
-        onSubmit={() => form.handleSubmit()}
+    <form
+      onSubmit={handleSubmit(onSubmit)}
+      className="max-w-md mx-auto bg-white p-6 rounded-lg shadow-md space-y-4"
+    >
+      <input
+        type="text"
+        placeholder="Project"
+        {...register('Project', { required: true, min: 1, maxLength: 80 })}
+        className="text-slate-800  w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600"
+      />
+      <input
+        type="datetime-local"
+        placeholder="Date"
+        {...register('Date', { required: true, min: 1 })}
+        className="text-slate-800 w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600"
+      />
+      <input
+        type="email"
+        placeholder="Email"
+        {...register('Email', { required: true, pattern: /^\S+@\S+$/i })}
+        className="text-slate-800 w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600"
+      />
+      <input
+        type="tel"
+        placeholder="Phone Number"
+        {...register('Phone Number', { required: true, maxLength: 12 })}
+        className="text-slate-800 w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600"
+      />
+      <select
+        {...register('Status', { required: true })}
+        className="text-slate-800 w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600"
       >
-        {formErrors.map((error) => (
-          <p key={error as string} className="text-red-500">
-            {error}
-          </p>
-        ))}
-        <div className="mb-4">
-          <form.Field
-            name="project"
-            validators={{
-              onChange: ({ value }) =>
-                value !== '' ? undefined : 'Empty project name not allowed',
-            }}
-          >
-            {(field) => {
-              return (
-                <div>
-                  <label className="block text-sm font-medium text-gray-700">
-                    Project Name
-                  </label>
-                  <input
-                    className="text-slate-800 mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-                    name="project"
-                    type="string"
-                    value={field.state.value}
-                    onChange={(e) => field.handleChange(e.target.value)}
-                  />
-                  {field.state.meta.errors.map((error) => (
-                    <p key={error as string} className="text-red-500">
-                      {error}
-                    </p>
-                  ))}
-                </div>
-              );
-            }}
-          </form.Field>
-        </div>
-        <div className="mb-4">
-          <form.Field
-            name="price"
-            validators={{
-              onChange: ({ value }) =>
-                value > 0 ? undefined : 'Price must be greater than 0',
-            }}
-          >
-            {(field) => {
-              return (
-                <div>
-                  <label className=" text-slate-800 block text-sm font-medium ">
-                    Price
-                  </label>
-                  <input
-                    className="text-slate-800 mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-                    name="price"
-                    type="number"
-                    value={field.state.value}
-                    onChange={(e) => field.handleChange(e.target.valueAsNumber)}
-                  />
-                  {field.state.meta.errors.map((error) => (
-                    <p key={error as string} className="text-red-500">
-                      {error}
-                    </p>
-                  ))}
-                </div>
-              );
-            }}
-          </form.Field>
-        </div>
-        <form.Subscribe
-          selector={(formState) => [
-            formState.canSubmit,
-            formState.isSubmitting,
-          ]}
-        >
-          {([canSubmit, isSubmitting]) => (
-            <button
-              className="w-full bg-indigo-600 text-white py-2 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-              type="submit"
-              disabled={!canSubmit}
-            >
-              {isSubmitting ? '...' : 'Submit'}
-            </button>
-          )}
-        </form.Subscribe>
-      </form>
-    </div>
+        <option value="Paused">Paused</option>
+        <option value="In-Progress">In-Progress</option>
+        <option value="Canceled">Canceled</option>
+        <option value="Completed">Completed</option>
+      </select>
+      <input
+        type="submit"
+        className="text-slate-800 w-full px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600"
+      />
+    </form>
   );
 }

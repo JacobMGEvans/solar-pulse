@@ -26,10 +26,10 @@
     "@ag-grid-enterprise/set-filter": "latest",
     "@ag-grid-enterprise/sparklines": "latest",
     "@ag-grid-enterprise/status-bar": "latest",
-    "@tanstack/react-form": "^0.26.4",
     "next": "canary",
     "react": "canary",
     "react-dom": "canary",
+    "react-hook-form": "^7.52.2",
     "zod": "latest"
   },
   "devDependencies": {
