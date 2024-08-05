@@ -10,8 +10,6 @@ export default function App() {
     formState: { errors },
   } = useForm();
   const onSubmit: SubmitHandler<FieldValues> = async (data) => {
-    console.log('ON SUBMIT', typeof data);
-    console.log('ON SUBMIT', data);
     await formAction(null, data);
   };
 
