@@ -23,29 +23,29 @@ export default function App() {
       <input
         type="text"
         placeholder="Project"
-        {...register('Project', { required: true, min: 1, maxLength: 80 })}
+        {...register('project', { required: true, min: 1, maxLength: 80 })}
         className="text-slate-800  w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600"
       />
       <input
         type="datetime-local"
         placeholder="Date"
-        {...register('Date', { required: true, min: 1 })}
+        {...register('date', { required: true, min: 1 })}
         className="text-slate-800 w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600"
       />
       <input
         type="email"
         placeholder="Email"
-        {...register('Email', { required: true, pattern: /^\S+@\S+$/i })}
+        {...register('email', { required: true, pattern: /^\S+@\S+$/i })}
         className="text-slate-800 w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600"
       />
       <input
         type="tel"
         placeholder="Phone Number"
-        {...register('Phone Number', { required: true, maxLength: 12 })}
+        {...register('phoneNumber', { required: true, maxLength: 12 })}
         className="text-slate-800 w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600"
       />
       <select
-        {...register('Status', { required: true })}
+        {...register('status', { required: true })}
         className="text-slate-800 w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600"
       >
         <option value="Paused">Paused</option>
@@ -55,7 +55,7 @@ export default function App() {
       </select>
       <input
         type="submit"
-        className="text-slate-800 w-full px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600"
+        className="text-slate-800 w-full px-4 py-2 bg-blue-600  rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600"
       />
     </form>
   );
