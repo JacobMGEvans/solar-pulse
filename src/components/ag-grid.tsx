@@ -62,17 +62,20 @@ export default function FinanceExample({ gridTheme = 'ag-theme-quartz' }) {
         field: 'ticker',
         cellRenderer: 'agGroupCellRenderer',
         minWidth: 380,
+        editable: true,
       },
       {
         field: 'instrument',
         cellDataType: 'text',
         type: 'rightAligned',
         maxWidth: 180,
+        editable: true,
       },
       {
         headerName: 'P&L',
         cellDataType: 'number',
         type: 'rightAligned',
+        editable: true,
         cellRenderer: 'agAnimateShowChangeCellRenderer',
         valueGetter: ({ data }: ValueGetterParams) =>
           data && data.quantity * (data.price / data.purchasePrice),
@@ -83,6 +86,7 @@ export default function FinanceExample({ gridTheme = 'ag-theme-quartz' }) {
         headerName: 'Total Value',
         type: 'rightAligned',
         cellDataType: 'number',
+        editable: true,
         valueGetter: ({ data }: ValueGetterParams) =>
           data && data.quantity * data.price,
         cellRenderer: 'agAnimateShowChangeCellRenderer',
@@ -93,6 +97,7 @@ export default function FinanceExample({ gridTheme = 'ag-theme-quartz' }) {
         field: 'quantity',
         cellDataType: 'number',
         type: 'rightAligned',
+        editable: true,
         valueFormatter: numberFormatter,
         maxWidth: 150,
       },
@@ -101,6 +106,7 @@ export default function FinanceExample({ gridTheme = 'ag-theme-quartz' }) {
         field: 'purchasePrice',
         cellDataType: 'number',
         type: 'rightAligned',
+        editable: true,
         valueFormatter: numberFormatter,
         maxWidth: 150,
       },
@@ -108,12 +114,14 @@ export default function FinanceExample({ gridTheme = 'ag-theme-quartz' }) {
         field: 'purchaseDate',
         cellDataType: 'dateString',
         type: 'rightAligned',
+        editable: true,
         hide: true,
       },
       {
         headerName: 'Last 24hrs',
         field: 'last24',
         cellRenderer: 'agSparklineCellRenderer',
+        editable: true,
         cellRendererParams: {
           sparklineOptions: {
             line: {

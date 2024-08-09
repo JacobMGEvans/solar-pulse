@@ -26,9 +26,9 @@
     "@ag-grid-enterprise/set-filter": "latest",
     "@ag-grid-enterprise/sparklines": "latest",
     "@ag-grid-enterprise/status-bar": "latest",
-    "next": "canary",
-    "react": "canary",
-    "react-dom": "canary",
+    "next": "latest",
+    "react": "beta",
+    "react-dom": "beta",
     "react-hook-form": "^7.52.2",
     "zod": "latest"
   },
