@@ -52,7 +52,7 @@ const numberFormatter: ValueFormatterFunc = ({ value }) => {
   return value === null ? '' : formatter.format(value);
 };
 
-export default function FinanceExample({ gridTheme = 'ag-theme-quartz' }) {
+export default function AgGrid({ gridTheme = 'ag-theme-quartz' }) {
   const [rowData, setRowData] = useState(getData());
   const gridRef = useRef<AgGridReact>(null);
 
