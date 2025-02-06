@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 232 47% 12%;
+    --foreground: 30 67% 97%;
+
+    --card: 232 47% 15%;
+    --card-foreground: 30 67% 97%;
+
+    --popover: 232 47% 15%;
+    --popover-foreground: 30 67% 97%;
+
+    --primary: 20 95% 57%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 12 75% 61%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 232 47% 20%;
+    --muted-foreground: 30 10% 75%;
+
+    --accent: 28 90% 64%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 232 47% 22%;
+    --input: 232 47% 22%;
+    --ring: 28 90% 64%;
+
+    --radius: 0.5rem;
+
+    /* Chart colors */
+    --chart-1: 20 95% 57%;
+    --chart-2: 28 90% 64%;
+    --chart-3: 12 75% 61%;
+    --chart-4: 35 85% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Custom gradient backgrounds */
+.bg-sunset-gradient {
+  background: linear-gradient(
+    135deg,
+    hsl(232 47% 15%) 0%,
+    hsl(232 47% 12%) 100%
+  );
+}
+
+.bg-card-gradient {
+  background: linear-gradient(
+    145deg,
+    hsl(232 47% 17%) 0%,
+    hsl(232 47% 15%) 100%
+  );
+}
